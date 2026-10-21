@@ -10,23 +10,23 @@ enum class Result { Draw, Win, Lose };
 class Player {
 private:
     string name;
-    Hand currentHand; // 【変更】手を保持するメンバ変数
+    Hand currentHand; 
 
 public:
-    Player(string initialName); // 【変更】引数付きコンストラクタ
+    Player(string initialName); 
     void inputName();
-    void chooseHand(); // 【変更】戻り値をvoidにし、内部で保持する
+    void chooseHand(); 
     string getName() const { return name; }
-    Hand getHand() const { return currentHand; } // 【追加】保持した手を取得するゲッター
+    Hand getHand() const { return currentHand; } 
 };
 
 class Cpu {
 private:
-    Hand currentHand; // 【変更】手を保持するメンバ変数（private）
+    Hand currentHand; 
 
 public:
-    void chooseHand(); // 【変更】戻り値をvoidにし、内部で保持する
-    Hand getHand() const { return currentHand; } // 【追加】保持した手を取得するゲッター
+    void chooseHand(); 
+    Hand getHand() const { return currentHand; } 
 };
 
 class JankenGame {
@@ -41,6 +41,6 @@ private:
     string getHandName(Hand hand) const;
 
 public:
-    JankenGame(string playerName); // 【変更】引数付きコンストラクタ
+    JankenGame(string playerName);
     void play();
 };
